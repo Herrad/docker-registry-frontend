@@ -6,7 +6,7 @@ module.exports = function (apiClient) {
                 next();
             })
             .catch(function (err) {
-                next(err)
+                next(err);
             });
     };
 }

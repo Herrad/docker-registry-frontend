@@ -8,7 +8,7 @@
     <h1>Docker Registry</h1>
     <ul>
     <% for (var i = 0; i < repositories.length; i++){ %>
-    	<li><%= repositories[i] %></li>
+    	<li><a href="/repository/<%=repositories[i]%>"><%= repositories[i] %></a></li>
     <%}%>
     </ul>
   </body>
