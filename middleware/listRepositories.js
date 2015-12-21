@@ -1,8 +1,8 @@
 module.exports = function (apiClient) {
     return function (req, res, next) {
-        apiClient.getRepositories()
+        apiClient.makeRequest('/_catalog')
             .then(function (data) {
-                req.repositories = data;
+                req.repositories = data.repositories;
                 next();
             })
             .catch(function (err) {

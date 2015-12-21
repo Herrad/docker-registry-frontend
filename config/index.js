@@ -1,15 +1,22 @@
 var configFromFile = require('./config.json')
 
-function getConfigFromEnvironment() {
-    return {
-        host: "foo",
-        port: "bar"
-    }
-}
-
 module.exports = function () {
-    if (configFromFile) {
-        return configFromFile;
+    function getConfigFromEnvironment() {
+        return {
+            host: "foo",
+            port: "bar"
+        }
     }
-    return getConfigFromEnvironment()
+
+    var config = getConfigFromEnvironment()
+    if (configFromFile) {
+        config = configFromFile;
+    }
+
+    return {
+        getApiAddress: function () {
+            return "http://" + config.host + ":" + config.port + "/v2"
+        }
+    }
+
 }
