@@ -6,7 +6,10 @@
   </head>
   <body>
     <h1>Docker Registry</h1>
-    <p>host: <%= host %></p>
-    <p>port: <%= port %></p>
+    <ul>
+    <% for (var i = 0; i < repositories.length; i++){ %>
+    	<li><%= repositories[i] %></li>
+    <%}%>
+    </ul>
   </body>
 </html>
