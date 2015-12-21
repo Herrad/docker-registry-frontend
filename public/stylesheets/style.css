@@ -1,6 +1,14 @@
 body {
-  padding: 50px;
-  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin:0;
+	padding: 0;
+  	font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	margin: 0;
+}
+h2 {
+	margin: 0;
 }
 
 a {
@@ -9,20 +17,44 @@ a {
 
 ul {
 	list-style: none;
+	margin:0;
 }
 
 li {
 	text-align: center;
 }
 
+.header {
+	width: 100%;
+	padding: 50px 0 20px 20px;
+	background: #eeefee
+}
+
+.content {
+	margin: 20px auto 0 auto;
+	width: 80%;
+}
+.content h2{
+	padding:30px 0 10px 10px;
+}
+
 .repositories {
-	width: 800px;
-	margin:auto;
+	padding: 0;
+	border: 1px solid lightgray;
+	border-bottom:0;
+	background: #ffffff;
 }
 
 .repository {
 	width: 100%;
-	padding-bottom:20px;
+	padding:20px 0 20px 0;
 	border-bottom: 1px solid lightgray;
 	
+}
+
+.repository a {
+	text-decoration: none;
+}
+.repository a:hover {
+	text-decoration: underline;
 }
