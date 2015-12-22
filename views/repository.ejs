@@ -9,11 +9,11 @@
 		<h1><a href="/">Docker Registry</a></h1>
     </div>
     <div class="content">
-	    <h2>Repositories:</h2>
-	    <ul class="repositories">
-	    <% for (var i = 0; i < repositories.length; i++){ %>
-	    	<li class="repository">
-	    			<a href="/repository?repository=<%=repositories[i].url%>"><%= repositories[i].raw %></a>
+	    <h2>Tags for <%= image.name%>:</h2>
+	    <ul class="tags">
+	    <% for (var i = 0; i < image.tags.length; i++){ %>
+	    	<li class="tag">
+				<%= image.tags[i] %>
 	    	</li>
 	    <%}%>
 	    </ul>

@@ -8,8 +8,9 @@ var bodyParser = require('body-parser');
 var config = require('./config')();
 var apiClient = require('./middleware/apiClient')(config);
 var listRepositories = require('./middleware/listRepositories')(apiClient);
+var listTags = require('./middleware/listTags')(apiClient);
 
-var router = require('./routes/index')(listRepositories);
+var router = require('./routes/index')(listRepositories, listTags);
 
 var app = express();
 
