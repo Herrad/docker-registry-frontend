@@ -6,8 +6,6 @@ module.exports = function (config) {
             var target = config.getApiAddress() + endpoint;
             return new Promise(function (resolve, reject) {
                 request(target, function (err, response) {
-
-                    console.log(response.body)
                     if (err) {
                         return reject(new Error(err));
                     }
