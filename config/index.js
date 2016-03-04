@@ -15,7 +15,7 @@ module.exports = function () {
 
     return {
         getApiAddress: function () {
-            return "https://" + config.host + ":" + config.port + "/v2"
+            return  config.host + ":" + config.port + "/v2"
         }
     }
 
