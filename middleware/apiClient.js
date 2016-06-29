@@ -4,9 +4,11 @@ module.exports = function (config) {
     return {
         makeRequest: function (endpoint) {
             var target = config.getApiAddress() + endpoint;
+            console.log(target);
             return new Promise(function (resolve, reject) {
                 request(target, function (err, response) {
                     if (err) {
+                        console.log('err')
                         return reject(new Error(err));
                     }
                     if (response.statusCode != 200 && response.statusCode != "200") {
